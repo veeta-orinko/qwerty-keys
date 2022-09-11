@@ -1,4 +1,5 @@
 import React from 'react'
+import Keyboard from './Keyboard'
 
 function App() {
   return (
@@ -6,6 +7,7 @@ function App() {
       <header className="header">
         <h1>My Collection</h1>
       </header>
+      <Keyboard />
       <section className="main">{/* add your code here */}</section>
     </>
   )
