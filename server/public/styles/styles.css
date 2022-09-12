@@ -1,0 +1,7 @@
+body {
+  background-color: rgb(231, 179, 158);
+}
+
+.key:active {
+  margin-top:15px;
+}
