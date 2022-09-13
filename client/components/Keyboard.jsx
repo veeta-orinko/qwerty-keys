@@ -1,12 +1,12 @@
 import React from 'react'
-import Keys from './Keys'
+import Key from './Key'
 
 const Keyboard = () => {
   return (
     <div>
-      <Keys keycode={27} id="1" />
-      <Keys keycode={49} id="2" />
-      <Keys keycode={50} id="3" />
+      <Key keycode={27} id="1" />
+      <Key keycode={49} id="2" />
+      <Key keycode={50} id="3" />
     </div>
   )
 }
