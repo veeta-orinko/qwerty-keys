@@ -1,29 +1,25 @@
-import React, { useState, useEffect, useRef } from 'react'
-
-///// have all the keys displaying
+import React, { useState } from 'react'
 
 const Keys = (props) => {
-  const [floatClick, setFloatClick] = useState('')
-  const el = useRef()
-  // sets up a ref that doesn't cause component to re-render
-  useEffect(() => {
-    function keypress() {
-      setFloatClick('key')
-      console.log('HELLOOOO')
-    }
-    el.current.addEventListener('click', keypress)
-    return () => {
-      el.current.removeEventListener('click', keypress)
-    }
-  }, [])
+  const [isPressed, setIsPressed] = useState(false)
 
-  // function keyClick(e) {
-  //   e.keyCode >= '8' && e.keyCode <= '90'
-  //   setFloatClick('key')
-  // }
+  const down = () => setIsPressed(true)
+  const up = () => setIsPressed(false)
 
   const image = '../images/' + props.keycode + 'keyDown.png'
-  return <img src={image} alt="keys" className={floatClick} ref={el} />
+
+  return (
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
+    <img
+      src={image}
+      alt="keys"
+      className={isPressed ? 'key active' : 'key'}
+      onMouseDown={down}
+      onMouseUp={up}
+      onTouchStart={down}
+      onTouchEnd={up}
+    />
+  )
 }
 
 export default Keys

@@ -8,6 +8,7 @@ function App() {
         <h1>My Collection</h1>
       </header>
       <Keyboard />
+
       <section className="main">{/* add your code here */}</section>
     </>
   )
