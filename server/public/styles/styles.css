@@ -1,13 +1,16 @@
 body {
-  background-color: rgb(255, 227, 200);
+  background-color: rgb(255, 226, 249);
 }
+
 
 .key {
   position: relative;
-  size: 10px
+  z-index: 1;
 }
 
 .active {
   top:15px;
 }
+
+
 

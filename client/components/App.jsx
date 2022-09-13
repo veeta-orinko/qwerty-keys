@@ -4,12 +4,12 @@ import Keyboard from './Keyboard'
 function App() {
   return (
     <>
-      <header className="header">
-        <h1>My Collection</h1>
-      </header>
+      <header className="header"></header>
+
       <Keyboard />
 
       <section className="main">{/* add your code here */}</section>
+      <image src="../plant2.gif" />
     </>
   )
 }

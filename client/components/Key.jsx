@@ -18,13 +18,12 @@ const Key = (props) => {
     }
   }
 
-  // shared function for typing AND clicking - pressed
+  // shared function for typeing
   function keyPressed() {
     console.log('clicked OR typed ' + props.keycode)
     setIsPressed(true)
   }
 
-  // shared function for typing AND clicking - unpressed
   function keyUnPressed() {
     console.log('stopped clicking OR typing ' + props.keycode)
     setIsPressed(false)
@@ -39,6 +38,7 @@ const Key = (props) => {
   return (
     // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
     <img
+      height="55px"
       src={image}
       alt="keys"
       className={isPressed ? 'key active' : 'key'}
