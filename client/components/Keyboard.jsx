@@ -1,24 +1,27 @@
 import React from 'react'
 import Key from './Key'
 
+///
+
+/// adding note to keys
 const Keyboard = () => {
   return (
     <>
       <div>
-        <Key keycode={27} id="1" />
-        <Key keycode={49} id="2" />
-        <Key keycode={50} id="3" />
-        <Key keycode={51} id="4" />
-        <Key keycode={52} id="5" />
-        <Key keycode={53} id="6" />
-        <Key keycode={54} id="7" />
-        <Key keycode={55} id="8" />
-        <Key keycode={56} id="9" />
-        <Key keycode={57} id="10" />
-        <Key keycode={48} id="11" />
-        <Key keycode={109} id="12" />
-        <Key keycode={107} id="13" />
-        <Key keycode={8} id="14" />
+        <Key keycode={27} id="1" note="A2" />
+        <Key keycode={49} id="2" note="F2" />
+        <Key keycode={50} id="3" note="F3" />
+        <Key keycode={51} id="4" note="F4" />
+        <Key keycode={52} id="5" note="G2" />
+        <Key keycode={53} id="6" note="G3" />
+        <Key keycode={54} id="7" note="G4" />
+        <Key keycode={55} id="8" note="B2" />
+        <Key keycode={56} id="9" note="B3" />
+        <Key keycode={57} id="10" note="B4" />
+        <Key keycode={48} id="11" note="C2" />
+        <Key keycode={109} id="12" note="C3" />
+        <Key keycode={107} id="13" note="C4" />
+        <Key keycode={8} id="14" note="C5" />
       </div>
       <div>
         <Key keycode={9} id="15" />

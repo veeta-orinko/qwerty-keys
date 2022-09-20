@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import * as Tone from 'tone'
+const synth = new Tone.PolySynth(Tone.Synth).toDestination()
 
 const Key = (props) => {
   // click state
@@ -18,8 +20,10 @@ const Key = (props) => {
     }
   }
 
-  // shared function for typeing
+  // shared function for typing
   function keyPressed() {
+    const now = Tone.now()
+    synth.triggerAttackRelease(props.note, '8n', now)
     console.log('clicked OR typed ' + props.keycode)
     setIsPressed(true)
   }
@@ -29,9 +33,15 @@ const Key = (props) => {
     setIsPressed(false)
   }
 
-  // key press listener and state handler
-  window.addEventListener('keydown', keydown, false)
-  window.addEventListener('keyup', keyup, false)
+  useEffect(() => {
+    window.addEventListener('keydown', keydown)
+    window.addEventListener('keyup', keyup)
+
+    return () => {
+      window.removeEventListener('keydown', keydown)
+      window.removeEventListener('keyup', keyup)
+    }
+  }, [keyup, keydown])
 
   const image = '../images/' + props.keycode + 'keyDown.png'
 
