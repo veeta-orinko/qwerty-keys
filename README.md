@@ -1,3 +1,1 @@
-# Fullstack App
-
-An interactive QWERTY key synthesiser web application
+A audio synthesiser activated using keyboard keys! WIP
