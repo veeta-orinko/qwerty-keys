@@ -23,7 +23,7 @@ const Key = (props) => {
   // shared function for typing
   function keyPressed() {
     const now = Tone.now()
-    synth.triggerAttackRelease(props.note, '8n', now)
+    synth.triggerAttackRelease(props.note, '4n', now)
     console.log('clicked OR typed ' + props.keycode)
     setIsPressed(true)
   }
