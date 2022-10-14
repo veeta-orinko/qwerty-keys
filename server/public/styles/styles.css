@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(180, 212, 255);
+  background-color: rgb(245, 216, 255);
 }
 
 
@@ -12,5 +12,17 @@ body {
   top:15px;
 }
 
+.about {
+  justify-content: center;
+text-align: center;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+gap: 35px;
+}
 
-
+.text {
+  justify-content: center;
+  text-align: center;
+  color: rgb(250, 92, 13);
+}

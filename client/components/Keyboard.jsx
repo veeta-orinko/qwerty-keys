@@ -1,7 +1,10 @@
 import React from 'react'
 import Key from './Key'
+import AboutButton from './AboutButton'
+import { Link } from 'react-router-dom'
 
-///
+/// contemplate = create random chords by -4 & -2 numbers by cycling through the
+/// 'key' ID
 
 /// adding note to keys
 const Keyboard = () => {
@@ -70,7 +73,10 @@ const Keyboard = () => {
           <Key keycode={16} id="53" note="D5" />
         </div>
         <div>
-          <Key keycode={480} id="54" />
+          <Link to="about">
+            <AboutButton />
+          </Link>
+
           <Key keycode={17} id="55" note="A4b" />
           <Key keycode={18} id="56" note="D4" />
           <Key keycode={91 || 93 || 224} id="57" note="F2" />

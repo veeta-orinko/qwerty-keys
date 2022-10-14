@@ -1,10 +1,19 @@
 import React, { useState, useEffect } from 'react'
+import { on } from 'superagent'
 import * as Tone from 'tone'
 const synth = new Tone.PolySynth(Tone.Synth).toDestination()
 
 const Key = (props) => {
   // click state
+  // const [isClicked, setIsClicked] = useState(false)
   const [isPressed, setIsPressed] = useState(false)
+
+  // const clicker = (e) => {
+  //   console.log(e)
+  //   if (setIsClicked && setIsPressed) {
+  //     setIsPressed(true)
+  //   }
+  // }
 
   // typing only - key down
   const keydown = (e) => {
@@ -24,12 +33,10 @@ const Key = (props) => {
   function keyPressed() {
     const now = Tone.now()
     synth.triggerAttackRelease(props.note, '4n', now)
-    console.log('clicked OR typed ' + props.keycode)
     setIsPressed(true)
   }
 
   function keyUnPressed() {
-    console.log('stopped clicking OR typing ' + props.keycode)
     setIsPressed(false)
   }
 
@@ -48,12 +55,15 @@ const Key = (props) => {
   return (
     // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
     <img
+      draggable="false"
+      // onMouseEnter={clicker}
+      // onMouseLeave={keyUnPressed}
       height="55px"
       src={image}
       alt="keys"
       className={isPressed ? 'key active' : 'key'}
-      onMouseDown={keyPressed}
       onMouseUp={keyUnPressed}
+      onMouseDown={keyPressed}
       onTouchStart={keyPressed}
       onTouchEnd={keyUnPressed}
     />
