@@ -1,21 +1,15 @@
-import React, { useState } from 'react';
-import Slider from '@mui/material/Slider';
+import React from 'react';
 import * as Tone from 'tone';
+import Slider from '@mui/material/Slider';
 
+// Create and export the synth and distortion effect in a separate module
+// This allows the same synth and distortion effect to be used in multiple components
+export const synth = new Tone.PolySynth(Tone.Synth).toDestination();
+export const distortionEffect = new Tone.Distortion(0);
+
+// The Slider component controls the amount of distortion
 function DistortionSlider() {
-  const [volume, setVolume] = useState(0);
-  const [distortion, setDistortion] = useState(0);
-
-  const synth = new Tone.PolySynth(Tone.Synth).toDestination();
-  const volumeControl = new Tone.Volume(volume);
-  const distortionEffect = new Tone.Distortion(distortion);
-
-  synth.chain(distortionEffect, volumeControl);
-
-  const handleVolumeChange = (event, newValue) => {
-    setVolume(newValue);
-    volumeControl.volume.value = newValue;
-  };
+  const [distortion, setDistortion] = React.useState(0);
 
   const handleDistortionChange = (event, newValue) => {
     setDistortion(newValue);
@@ -23,17 +17,9 @@ function DistortionSlider() {
   };
 
   return (
-    <div>
-      <div>
-        <h2>Volume</h2>
-        <Slider value={volume} onChange={handleVolumeChange} />
-      </div>
-      <div>
-        <h2>Distortion</h2>
-        <Slider value={distortion} onChange={handleDistortionChange} />
-      </div>
-    </div>
+    <Slider value={distortion} onChange={handleDistortionChange} min={0} max={1} step={0.01} />
   );
 }
+
 
 export default DistortionSlider;
