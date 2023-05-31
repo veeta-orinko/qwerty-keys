@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Keyboard />} />
+        <Route path="/" element={<Keyboard/>} />
         <Route path="/about" element={<About />} />
       </Routes>
       <section className="main">{/* add your code here */}</section>

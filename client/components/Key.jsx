@@ -1,19 +1,14 @@
 import React, { useState, useEffect } from 'react'
-import { on } from 'superagent'
 import * as Tone from 'tone'
-const synth = new Tone.PolySynth(Tone.Synth).toDestination()
+import synth from './Synth'
+
+
 
 const Key = (props) => {
-  // click state
-  // const [isClicked, setIsClicked] = useState(false)
+
   const [isPressed, setIsPressed] = useState(false)
 
-  // const clicker = (e) => {
-  //   console.log(e)
-  //   if (setIsClicked && setIsPressed) {
-  //     setIsPressed(true)
-  //   }
-  // }
+ 
 
   // typing only - key down
   const keydown = (e) => {
