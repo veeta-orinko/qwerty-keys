@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import * as Tone from 'tone'
-import synth from './Synth'
+import { synth } from './Synth'
 
 
 

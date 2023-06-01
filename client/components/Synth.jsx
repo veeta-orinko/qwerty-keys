@@ -1,7 +1,8 @@
 import * as Tone from 'tone';
 
-// create synth instance
-const synth = new Tone.PolySynth(Tone.Synth).toDestination();
+const distortion = new Tone.Distortion(0.4).toDestination();
+distortion.oversample = '4x';
 
-// export synth for use in other modules
-export default synth;
+const synth = new Tone.PolySynth(Tone.Synth).chain(distortion, Tone.Destination);
+
+export { synth, distortion };
