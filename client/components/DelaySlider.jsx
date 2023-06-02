@@ -22,7 +22,7 @@ function DelaySlider() {
     }, []);
   
     return (
-        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '40px', fontFamily: 'Roboto', fontWeight: 'bold', fontSize: '20px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '40px', fontWeight: 'bold', fontSize: '20px' }}>
         <div style={{ position: 'relative', height: '2px', width: '180px', background: '#66aa78', marginRight: '20px' }}>
           <span style={{ position: 'absolute', top: '-11px', left: `${value * 175}px`, fontSize: '24px', userSelect: 'none' }}>🌸</span>
           <input
@@ -35,7 +35,7 @@ function DelaySlider() {
             style={{ position: 'absolute', opacity: 0, width: '200px', height: '24px' }}
           />
         </div>
-        <label style={{ color: '#66aa78' }}>Delay</label>
+        <label style={{ color: '#66aa78' }}>DELAY</label>
       </div>
     )
   }

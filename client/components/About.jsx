@@ -45,6 +45,7 @@ function About() {
     fontWeight: 'bold',
     marginBottom: '10px',
   };
+  
 
   const txtStyle = {
     fontSize: '20px',
@@ -86,10 +87,10 @@ function About() {
 
       <div style={textStyle}>
         <h1 style={headingStyle}>𓂉 hi  </h1>
-        <p style={txtStyle}> You found the about page! QWERTY keys was built by me 
+        <p style={txtStyle}> You found the about page! QWERTY keys is an experimental tone.js project built by me 
         (Veeta Orinko)
-        I'm a mum who loves to code, and I live in Lake Hawea, New Zealand 
-        <p style={txtStyle}> I'll be evolving the project some more, so keep an eye out for feature updates! This is an early release so it's a bit buggy, and some of the keys don't work, but that's all part of the charm, right?  </p>
+
+        <p style={txtStyle}> I'll be evolving the project over time, so keep an eye out for feature updates. This early release is buggy, and some of the keys don't work, but that's all part of the charm, right?  </p>
       </p>  <p style={txt2Style}> <a href="https://www.instagram.com/veetaorinko/" target="_blank" rel="noreferrer" style={linkStyle} onMouseOver={() => {linkStyle = linkHoverStyle}} onMouseOut={() => {linkStyle = linkHoverStyle}}> my socials ⛰️ @veetaorinko</a></p>
       </div>
     </>

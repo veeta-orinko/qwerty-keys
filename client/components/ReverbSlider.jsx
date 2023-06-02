@@ -20,7 +20,7 @@ function ReverbSlider() {
   }, []);
 
   return (  
-    <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', fontFamily: 'Roboto', fontWeight: 'bold', fontSize: '20px' }}>
+    <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', fontWeight: 'bold', fontSize: '20px' }}>
       <div style={{ position: 'relative', height: '2px', width: '180px', background: '#66aa78', marginRight: '20px' }}>
         <span style={{ position: 'absolute', top: '-11px', left: `${value * 175}px`, fontSize: '24px', userSelect: 'none' }}>🌸</span>
         <input
@@ -33,7 +33,7 @@ function ReverbSlider() {
           style={{ position: 'absolute', opacity: 0, width: '200px', height: '24px' }}
         />
       </div>
-      <label style={{ color: '#66aa78' }}>Reverb</label>
+      <label style={{ color: '#66aa78' }}>REVERB</label>
     </div>
   );  
 }  

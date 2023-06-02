@@ -1,0 +1,18 @@
+.textStyle {
+    letterSpacing: '0.02em';
+    paddingTop: '10px';
+    paddingLeft: '250px';
+    paddingRight: '250px';
+    paddingBottom: '300px';
+    fontSize: '16px';
+    fontFamily: 'Roboto';
+    lineHeight: '1.5';
+    color: '#66aa78';
+  }
+  
+  .headingStyle {
+    fontSize: '50px';
+    fontWeight: 'bold';
+    marginBottom: '10px';
+  }
+  

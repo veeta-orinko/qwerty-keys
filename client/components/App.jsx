@@ -6,31 +6,54 @@ import DistortionSlider from './DistortionSlider';
 import ReverbSlider from './ReverbSlider';
 import DelaySlider from './DelaySlider';
 import { Route, Routes } from 'react-router-dom';
+import { emojiCursor } from "cursor-effects";
+new emojiCursor({ emoji: ["🌸", "🌸", "🌸"] });
+
+
+
+
+
 // import bgImage from '../../server/public/images/bgidea.png';
 
 function App() {
 
+  const headingStyle = {
+    fontSize: '40px',
+    fontWeight: 'bold',
+    marginTop: '100px',
+    marginBottom: '40px',
+    marginLeft: '2%',
+    color: '#66aa78',
+    letterSpacing: '0.09em',
+    
+  };
+
   useEffect(() => {
-    // This will start the audio context as soon as the component is mounted.
     Tone.start();
-  }, []); // Pass an empty array to run this effect only once, when the component mounts.
+  }, []);
 
+  
 
+  
   return (
+    
     <div style={{
       // backgroundImage: `url(${bgImage})`,
       // backgroundPosition: 'top',
       // backgroundSize: 'cover',
       // backgroundRepeat: 'no-repeat',
       // width: '100vw',
-      // height: '100vh',
-      paddingTop: '20vh',
+     height: '100vh',
       paddingLeft: '10vw'
     }}>
+      
+      <h1 style={headingStyle}> QWERTY KEYS  </h1>
+
       <Routes>
         <Route path="/" element={<>
-        <DistortionSlider/> <ReverbSlider/> <DelaySlider/>
-        <Keyboard/> 
+          <Keyboard/> 
+        <DistortionSlider/> <ReverbSlider/> <DelaySlider/> 
+       
       {
       //
       //<TremoloSlider/>
@@ -38,10 +61,10 @@ function App() {
       //<PhaserSlider/>
       // */
     }
+    
       </>} />
         <Route path="/about" element={<About />} />
       </Routes>
-   
       <section className="main">{/* add your code here */}</section>
     </div>
   )
