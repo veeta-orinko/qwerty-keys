@@ -4,10 +4,10 @@ import About from './About'
 import * as Tone from 'tone';
 import DistortionSlider from './DistortionSlider'
 import ReverbSlider from './ReverbSlider';
-// import DelaySlider from './DelaySlider'
+import DelaySlider from './DelaySlider'
 // import ChorusSlider from './ChorusSlider'
 // import PhaserSlider from './PhaserSlider'
-import TremoloSlider from './TremoloSlider'
+// import TremoloSlider from './TremoloSlider'
 import { Route, Routes } from 'react-router-dom'
 
 function App() {
@@ -21,10 +21,12 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<><Keyboard/> 
-        <DistortionSlider/> <ReverbSlider/><TremoloSlider/>
+        <Route path="/" element={<>
+        <DistortionSlider/> <ReverbSlider/> <DelaySlider/>
+        <Keyboard/> 
       {
-      //<DelaySlider/>
+      //
+      //<TremoloSlider/>
       //<ChorusSlider/>
       //<PhaserSlider/>
       // */

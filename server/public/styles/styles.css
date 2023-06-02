@@ -26,3 +26,13 @@ gap: 35px;
   text-align: center;
   color: rgb(250, 92, 13);
 }
+
+.slider::-webkit-slider-thumb {
+  /* This will apply to the thumb (handle) */
+  background: #ff69b4;
+}
+
+.slider::-moz-range-thumb {
+  /* This will apply to the thumb (handle) in Firefox */
+  background: #ff69b4;
+}
