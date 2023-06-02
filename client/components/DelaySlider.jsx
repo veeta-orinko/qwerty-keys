@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { delay } from './Synth.jsx';
 import WebFont from 'webfontloader';
 
+
 function DelaySlider() {
     const [value, setValue] = useState(0);
 
@@ -21,8 +22,8 @@ function DelaySlider() {
     }, []);
   
     return (
-      <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px', fontFamily: 'Roboto' }}>
-        <div style={{ position: 'relative', height: '2px', width: '180px', background: '#b19cd9', marginRight: '20px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '40px', fontFamily: 'Roboto', fontWeight: 'bold', fontSize: '20px' }}>
+        <div style={{ position: 'relative', height: '2px', width: '180px', background: '#66aa78', marginRight: '20px' }}>
           <span style={{ position: 'absolute', top: '-11px', left: `${value * 175}px`, fontSize: '24px', userSelect: 'none' }}>🌸</span>
           <input
             type="range"
@@ -34,7 +35,7 @@ function DelaySlider() {
             style={{ position: 'absolute', opacity: 0, width: '200px', height: '24px' }}
           />
         </div>
-        <label style={{ color: '#b19cd9' }}>DELAY</label>
+        <label style={{ color: '#66aa78' }}>Delay</label>
       </div>
     )
   }

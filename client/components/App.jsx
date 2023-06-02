@@ -1,14 +1,12 @@
-import React, { useEffect } from 'react'
-import Keyboard from './Keyboard'
-import About from './About'
+import React, { useEffect } from 'react';
+import Keyboard from './Keyboard';
+import About from './About';
 import * as Tone from 'tone';
-import DistortionSlider from './DistortionSlider'
+import DistortionSlider from './DistortionSlider';
 import ReverbSlider from './ReverbSlider';
-import DelaySlider from './DelaySlider'
-// import ChorusSlider from './ChorusSlider'
-// import PhaserSlider from './PhaserSlider'
-// import TremoloSlider from './TremoloSlider'
-import { Route, Routes } from 'react-router-dom'
+import DelaySlider from './DelaySlider';
+import { Route, Routes } from 'react-router-dom';
+// import bgImage from '../../server/public/images/bgidea.png';
 
 function App() {
 
@@ -19,7 +17,16 @@ function App() {
 
 
   return (
-    <>
+    <div style={{
+      // backgroundImage: `url(${bgImage})`,
+      // backgroundPosition: 'top',
+      // backgroundSize: 'cover',
+      // backgroundRepeat: 'no-repeat',
+      // width: '100vw',
+      // height: '100vh',
+      paddingTop: '20vh',
+      paddingLeft: '10vw'
+    }}>
       <Routes>
         <Route path="/" element={<>
         <DistortionSlider/> <ReverbSlider/> <DelaySlider/>
@@ -36,7 +43,7 @@ function App() {
       </Routes>
    
       <section className="main">{/* add your code here */}</section>
-    </>
+    </div>
   )
 }
 

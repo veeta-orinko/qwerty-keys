@@ -3,6 +3,8 @@ import Key from './Key'
 import AboutButton from './AboutButton'
 import { Link } from 'react-router-dom'
 
+
+
 /// contemplate = create random chords by -4 & -2 numbers by cycling through the
 /// 'key' ID
 
@@ -10,8 +12,24 @@ import { Link } from 'react-router-dom'
 const Keyboard = () => {
   return (
     <>
+         <div style={{
+        display: 'flex', 
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'flex-start', // Align children to the left
+        width: '100%',
+        padding: '0 5%', // Add padding to avoid keys being cut off
+      }}>
+
+      </div>
       <div className="keyboard">
-        <div>
+
+      <div style={{
+        display: 'flex', 
+        justifyContent: 'flex-start', // Align keys to the left
+        alignItems: 'center',
+        width: '100%',
+        }}>
           <Key keycode={27} id="1 " note="A2" />
           <Key keycode={49} id="2" note="F2" />
           <Key keycode={50} id="3" note="F3" />
@@ -27,7 +45,13 @@ const Keyboard = () => {
           <Key keycode={107} id="13" note="C4" />
           <Key keycode={8} id="14" note="C5" />
         </div>
-        <div>
+
+        <div style={{
+        display: 'flex', 
+        justifyContent: 'flex-start', // Align keys to the left
+        alignItems: 'center',
+        width: '100%',
+        }}>
           <Key keycode={9} id="15" note="G2#" />
           <Key keycode={81} id="16" note="G3#" />
           <Key keycode={87} id="17" note="A2#" />
@@ -43,7 +67,12 @@ const Keyboard = () => {
           <Key keycode={221} id="27" note="F3#" />
           <Key keycode={220} id="28" note="F2#" />
         </div>
-        <div>
+        <div style={{
+        display: 'flex', 
+        justifyContent: 'flex-start', // Align keys to the left
+        alignItems: 'center',
+        width: '100%',
+        }}>
           <Key keycode={20} id="29" note="D1" />
           <Key keycode={65} id="30" note="D2" />
           <Key keycode={83} id="31" note="D3" />
@@ -58,7 +87,12 @@ const Keyboard = () => {
           <Key keycode={222} id="40" note="D4b" />
           <Key keycode={13} id="41" note="A4b" />
         </div>
-        <div>
+        <div style={{
+        display: 'flex', 
+        justifyContent: 'flex-start', // Align keys to the left
+        alignItems: 'center',
+        width: '100%',
+        }}>
           <Key keycode={16} id="42" note="A4b" />
           <Key keycode={90} id="43" note="B3b" />
           <Key keycode={88} id="44" note="C4b" />
@@ -72,7 +106,12 @@ const Keyboard = () => {
           <Key keycode={191} id="52" note="E5b" />
           <Key keycode={16} id="53" note="D5" />
         </div>
-        <div>
+        <div style={{
+        display: 'flex', 
+        justifyContent: 'flex-start', // Align keys to the left
+        alignItems: 'center',
+        width: '100%',
+        }}>
           <Link to="about">
             <AboutButton />
           </Link>
